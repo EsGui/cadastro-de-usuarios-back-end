@@ -1,4 +1,4 @@
-const UserModel = (sequelize, DataTypes) => {
+const createUsersModel = (sequelize, DataTypes) => {
     const User = sequelize.define('createUsers', {
       id: { 
         type: DataTypes.INTEGER, 
@@ -13,9 +13,10 @@ const UserModel = (sequelize, DataTypes) => {
       },
     }, {
       underscored: true,
+      timestamps: false,
     });
   
     return User;
   };
   
-  module.exports = UserModel;
+module.exports = createUsersModel;
