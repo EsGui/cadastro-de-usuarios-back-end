@@ -1,5 +1,5 @@
 const express = require('express');
-/* const { createUsers } = require('./models') */
+const { createUsers } = require('./models')
 const bodyParser = require('body-parser');
 const cors = require('cors');
 
@@ -9,13 +9,13 @@ app.use(cors());
 
 const PORT = process.env.PORT || 3001
 
-app.get('/registration', async (req, res) => {
+app.post('/registration', async (req, res) => {
     const { 
       email,
       password
     } = req
-/* 
-    await createUsers.create(req.body) */
+
+    await createUsers.create(req.body)
 
     return res.status(200).json({ message: "cadastrado com sucesso!" });
 });
