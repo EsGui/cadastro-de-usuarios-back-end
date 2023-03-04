@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/EsGui/cadastro-de-usuarios-back-end/issues"
   },
-  "homepage": "https://github.com/EsGui/cadastro-de-usuarios-back-end#readme"
+  "homepage": "https://github.com/EsGui/cadastro-de-usuarios-back-end#readme",
+  "dependencies": {
+    "express": "4.17.1"
+  }
 }
