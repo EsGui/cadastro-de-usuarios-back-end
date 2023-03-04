@@ -1,8 +1,8 @@
-const express = require('express');
+import express from "express"
 
 const app = express();
 
-PORT = process.env.PORT || 3001
+const PORT = process.env.PORT || 3001
 
 app.get('/', (req, res) => res.status(200).json({ message: 'Olá Mundo!' }));
 
