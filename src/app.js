@@ -1,5 +1,5 @@
 const express = require('express');
-const { createUsers } = require('./models')
+const { createUsers } = require('./models');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 
@@ -7,7 +7,11 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cors());
 
-const PORT = process.env.PORT || 3001
+const PORT = process.env.PORT || 3001;
+
+app.get('/', async (req, res) => {
+  return res.status(200).json({ message: "Hello World!" })
+});
 
 app.post('/registration', async (req, res) => {
     const { 
